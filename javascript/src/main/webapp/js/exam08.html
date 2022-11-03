@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	let sum = 0;
+	for(let i=1; i<=10; i++){ //i는 지역변수로 들어가기 때문에 현재 지역을 벗어날시 찍히지않는다
+		document.write("i= " + i + "<br/>");
+		sum += i;
+	}
+	
+	document.write("i= " + i + "<br/>");//i는 지역번수, 지역을 벗어날시 error로 인하여 화면에는 보이지 않는다
+										//F12에서 error - i is not defined
+										// i를 let에서 var로 고치면 전역변수로 바뀌면서 error가뜨지않고 결과가 나온다.
+										
+	document.write("<h1>1부터 10까지의 합은" + sum + "입니다.</h1>");// <==var로 고칠시 화면에 출력가능!
+</script>
+</body>
+</html>
